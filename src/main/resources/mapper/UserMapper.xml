@@ -3,14 +3,6 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<!-- 
-一个mapper映射文件是以sql语句为单位进行配置，最终将sql语句封装到MappedStatement对象中
-namespace命名空间作用是更好对sql语句进行隔离，方便管理sql
-
-注意：后期讲mybatis的mapper代理开发方式时namespace有特殊的作用，如下：
-namespace等于mapper接口类路径，这样实现通过映射文件找到对应的mapper接口是哪个
-
- -->
 <mapper namespace="com.spacej.dao.UserDao">
 
 <!-- 打开二级缓存 -->
@@ -53,8 +45,8 @@ type：最终映射的pojo类型
 
 
 <!-- 查询用户，使用resultMap完成结果映射 -->
-<select id="findUserByIdResultMap" parameterType="int" resultMap="queryUserResultMap">
-	SELECT id id_,username username_,birthday birthday_,sex sex_,address address_  FROM USER WHERE id = #{id}
+<select id="findUsersResultMap" resultMap="queryUserResultMap">
+	SELECT id id_,username username_,birthday birthday_,sex sex_,address address_  FROM USER
 </select>
 
 <!-- 

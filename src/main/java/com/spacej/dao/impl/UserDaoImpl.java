@@ -18,7 +18,7 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
 		// Sqlsession定义为局部变量
 		SqlSession sqlSession = this.getSqlSession();
 
-		User user = sqlSession.selectOne("test.findUserById", id);
+		User user = sqlSession.selectOne("com.spacej.dao.UserDao.findUserById", id);
 
     	return user;
 	}
@@ -28,7 +28,7 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
 
 		// Sqlsession定义为局部变量
 		SqlSession sqlSession = this.getSqlSession();
-		List<User> list = sqlSession.selectList("test.findUserByName", "张");
+		List<User> list = sqlSession.selectList("com.spacej.dao.UserDao.findUserByName", "张");
 
 		return list;
 	}
@@ -37,7 +37,15 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
 	public void insertUser(User user) throws Exception {
 		// Sqlsession定义为局部变量
 		SqlSession sqlSession = this.getSqlSession();
-		sqlSession.insert("test.insertUser", user);
+		sqlSession.insert("com.spacej.dao.UserDao.insertUser", user);
+	}
+
+	@Override
+	public List<User> findUsersResultMap() throws Exception {
+		SqlSession sqlSession = this.getSqlSession();
+		List<User> list = sqlSession.selectList("com.spacej.dao.UserDao.findUsersResultMap");
+
+		return list;
 	}
 
 }

@@ -12,5 +12,7 @@ public interface UserDao {
 	public List<User> findUserByName(String name)throws Exception;
 	//添加用户
 	public void insertUser(User user) throws Exception;
+	
+	public List<User> findUsersResultMap() throws Exception;
 
 }
