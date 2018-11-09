@@ -33,7 +33,7 @@ public class RestControllerResponseAdvice implements ResponseBodyAdvice<Object> 
     };
 
     /**
-     * 对所有RestController的接口方法进行拦截
+     * 	对所有RestController的接口方法进行拦截
      */
     @Override
     public boolean supports(MethodParameter returnType, Class converterType) {
@@ -59,7 +59,6 @@ public class RestControllerResponseAdvice implements ResponseBodyAdvice<Object> 
         else if (body instanceof String){
             ApiResult result = ApiResult.valueOf(body);
             try {
-                //因为是String类型，我们要返回Json字符串，否则SpringBoot框架会转换出错
                 out = mapper.writeValueAsString(result);
             } catch (JsonProcessingException e) {
                 out = ApiResult.errorOf(ErrorCode.JSON_PARSE_ERROR,e.getMessage());
