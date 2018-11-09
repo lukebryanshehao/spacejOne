@@ -64,6 +64,9 @@ public class RestControllerResponseAdvice implements ResponseBodyAdvice<Object> 
                 out = ApiResult.errorOf(ErrorCode.JSON_PARSE_ERROR,e.getMessage());
             }
         }
+        else if (body == null){
+        	out = ApiResult.errorOf(ErrorCode.FAIL,"未获取到数据(返回结果为null)");
+        }
         else{
             out = ApiResult.valueOf(body);
         }

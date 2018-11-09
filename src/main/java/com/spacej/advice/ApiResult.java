@@ -42,8 +42,8 @@ public class ApiResult {
 		return new ApiResult(success.getCode(), success.getMsg(), body);
 	}
 	public static Object errorOf(ErrorCode jsonParseError, String message2) {
-		// TODO Auto-generated method stub
-		return null;
+		return new ApiResult(jsonParseError.getCode(), jsonParseError.getMsg(), message2);
+		//return new ApiResult(jsonParseError.getCode(), message2, null);
 	}
 	
 }

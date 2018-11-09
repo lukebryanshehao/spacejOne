@@ -2,6 +2,7 @@ package com.spacej.advice;
 
 public enum ErrorCode {
 	SUCCESS(200,"成功"),
+	FAIL(400,"失败"),
     NO_PERMISSION(211,"权限不足"),
     SERVER_ERROR(10000,"服务器异常"),
     AUTH_ERROR(10001,"认证失败"),
