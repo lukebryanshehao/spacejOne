@@ -10,7 +10,7 @@ import com.spacej.dao.UserMapper;
 import com.spacej.entity.User;
 
 @Service
-public class UserService implements com.spacej.service.UserService {
+public class UserServiceImpl implements com.spacej.service.UserService {
 
 	@Autowired
 	private UserMapper userDao;
