@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.spacej.model.User;
+import com.spacej.entity.User;
 import com.spacej.service.UserService;
 
 @RestController

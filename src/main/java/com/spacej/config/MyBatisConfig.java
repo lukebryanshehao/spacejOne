@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
-@Configuration
-@ComponentScan(basePackages = { "com.gitee.sunchenbin.mybatis.actable.manager.*" })
+//@Configuration
+//@ComponentScan(basePackages = { "com.gitee.sunchenbin.mybatis.actable.manager.*" })
 public class MyBatisConfig {
 
 	@Value("${spring.datasource.driverClass}")
@@ -62,7 +62,7 @@ public class MyBatisConfig {
 		PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
 		sqlSessionFactoryBean.setMapperLocations(
 				resolver.getResources("classpath*:com/gitee/sunchenbin/mybatis/actable/mapping/*/*.xml"));
-		sqlSessionFactoryBean.setTypeAliasesPackage("com.spacej.model.*");
+		sqlSessionFactoryBean.setTypeAliasesPackage("com.spacej.entity.*");
 		return sqlSessionFactoryBean;
 	}
 

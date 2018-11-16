@@ -1,8 +1,7 @@
-package com.spacej.model;
+package com.spacej.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 import com.gitee.sunchenbin.mybatis.actable.annotation.Column;
 import com.gitee.sunchenbin.mybatis.actable.annotation.Table;
