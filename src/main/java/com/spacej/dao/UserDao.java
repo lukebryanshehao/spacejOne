@@ -2,7 +2,7 @@ package com.spacej.dao;
 
 import java.util.List;
 
-import com.spacej.entity.User;
+import com.spacej.model.User;
 
 public interface UserDao {
 	

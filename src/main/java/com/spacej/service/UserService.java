@@ -2,7 +2,7 @@ package com.spacej.service;
 
 import java.util.List;
 
-import com.spacej.entity.User;
+import com.spacej.model.User;
 
 public interface UserService {
 	//根据用户id查询用户信息

@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 
 import com.spacej.dao.UserDao;
-import com.spacej.entity.User;
+import com.spacej.model.User;
 
 public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
 

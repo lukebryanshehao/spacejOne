@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.spacej.dao.UserDao;
-import com.spacej.entity.User;
+import com.spacej.model.User;
 
 @Service
 public class UserService implements com.spacej.service.UserService {
